@@ -11,13 +11,18 @@ function MovieList() {
         dispatch({ type: 'FETCH_MOVIES' });
     }, []);
 
+    const imageClicked = () => {
+        console.log('image clicked');
+        
+    }
+
     return (
         <main>
             <h1>MovieList</h1>
             <section className="movies">
                 {movies.map(movie => {
                     return (
-                        <div key={movie.id} >
+                        <div onClick={imageClicked} key={movie.id} >
                             <h3>{movie.title}</h3>
                             <img src={movie.poster} alt={movie.title}/>
                         </div>
