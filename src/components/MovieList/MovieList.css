@@ -1,4 +1,17 @@
 .movies {
     display : flex;
     flex-wrap: wrap;
+    flex-direction: row;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    justify-content: flex-start;
+    
+}
+
+.single-movie {
+    border: 10px solid;
+    border-color: black;
+    height: 400px;
+    width: 200px;
+    margin: 10px;
 }

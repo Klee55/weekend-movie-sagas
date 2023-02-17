@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import './Details.css';
 
 const Details = () => {
 
@@ -13,15 +14,15 @@ const Details = () => {
     }
 
     return (
-        <div >
+        <div className="details">
             <button onClick={() => handleClick()}>Back</button>
             <h3>{oneMovie.title}</h3>
             <section>
                 <h4>Genres:</h4>
                 {genres.map(genre => {
                     return (
-                        <ul key={genre.id}>
-                            <li key={genre.id}>
+                        <ul key={genre.name}>
+                            <li>
                                 {genre.name}
                             </li>
                         </ul>
