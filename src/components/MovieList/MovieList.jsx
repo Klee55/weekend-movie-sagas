@@ -18,8 +18,8 @@ function MovieList() {
         console.log('image clicked');
         console.log(movie);
         console.log(movie.id);
-        // dispatch({ type: 'FETCH_DETAILS'});
-        // history.push('/details');
+        dispatch({ type: 'CLICK_MOVIE', payload: movie});
+        history.push('/details');
     }
 
     return (
