@@ -32,8 +32,16 @@ function* fetchAllMovies() {
 }
 
 // get details
-function* fetchGenre() {
-    console.log('fetch detail saga');
+function* fetchGenre(action) {
+    console.log('in fetchGenre');
+    console.log(action.payload);
+    const id = action.payload;
+    try {
+        const genre = yield axios.get(`/api/genre/${id}`);
+        
+    } catch {
+        console.log('error fetching genre');
+    }
 }
 
 // Create sagaMiddleware

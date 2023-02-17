@@ -20,6 +20,7 @@ function MovieList() {
         console.log(movie.id);
         dispatch({ type: 'CLICK_MOVIE', payload: movie});
         history.push('/details');
+        dispatch({ type: 'FETCH_GENRE', payload: movie.id});
     }
 
     return (
