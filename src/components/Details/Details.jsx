@@ -14,24 +14,26 @@ const Details = () => {
     }
 
     return (
-        <div className="details">
+        <main>
             <button onClick={() => handleClick()}>Back</button>
-            <h3>{oneMovie.title}</h3>
-            <section>
-                <h4>Genres:</h4>
-                {genres.map(genre => {
-                    return (
-                        <ul key={genre.name}>
-                            <li>
-                                {genre.name}
-                            </li>
-                        </ul>
-                    );
-                })}
+            <section className="details">
+                <h3>{oneMovie.title}</h3>
+                {/* <section className="genres"> */}
+                    <h4>Genres:</h4>
+                    {genres.map(genre => {
+                        return (
+                            <ul key={genre.name}>
+                                <li>
+                                    {genre.name}
+                                </li>
+                            </ul>
+                        );
+                    })}
+                {/* </section> */}
+                <img src={oneMovie.poster} alt={oneMovie.title} />
+                <h5>{oneMovie.description}</h5>
             </section>
-            <h5>{oneMovie.description}</h5>
-            <img src={oneMovie.poster} alt={oneMovie.title} />
-        </div>
+        </main>
     );
 
 }
